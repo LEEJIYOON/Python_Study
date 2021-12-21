@@ -5,7 +5,7 @@ n,m=map(int,input().split()) #n은 node 갯수, m은 간선 갯수
 start=int(input()) #시작점
 
 INF=int(1e9)
-graph=[[]*(n+1) for i range(n+1)] #node 넘버와 graph 행 맞추기위해 n+1
+graph=[[] for i range(n+1)] #node 넘버와 graph 행 맞추기위해 n+1
 distance=[INF]*(n+1)
 
 for _ in range(m):
