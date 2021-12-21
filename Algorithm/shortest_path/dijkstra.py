@@ -14,11 +14,11 @@ for _ in range(m):
   
   
 def dijkstra(start):
-  h=[] #heapq은 앞에가 거리, 뒤에가 노드
+  q=[] #heapq은 앞에가 거리, 뒤에가 노드
   distance[start]=0
   heapq.heappush(h,(distance[start],start))
-  while h:
-    dist,now=heapq.heappop(h)
+  while q:
+    dist,now=heapq.heappop(q)
     
     if distance[now] < dist:
       continue
@@ -27,4 +27,4 @@ def dijkstra(start):
       cost=dist+i[1]
       if distance[i[0]] > cost: # graph는 앞에가 node 뒤에가 거리
         distance[i[0]]=cost
-        heapq.heappush(q,cost,i[0])
+        heapq.heappush(q,(cost,i[0]))
