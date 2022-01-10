@@ -24,3 +24,4 @@ def solution(food_times:list,k:int):
   return result[(k-sum_value)%length][1]
 
   
+#add comment
